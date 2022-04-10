@@ -5396,9 +5396,76 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/SecretComponent.vue?vue&type=script&lang=js& ***!
   \**********************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/resources/js/components/SecretComponent.vue: Unexpected token, expected \",\" (30:21)\n\n\u001b[0m \u001b[90m 28 |\u001b[39m             secrets\u001b[33m:\u001b[39m []\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m             formData\u001b[33m:\u001b[39m [\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m                 email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m                 password\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m             ]\u001b[0m\n\u001b[0m \u001b[90m 33 |\u001b[39m         }\u001b[0m\n    at instantiate (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:72:32)\n    at constructor (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:358:12)\n    at Parser.raise (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:3335:19)\n    at Parser.unexpected (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:3373:16)\n    at Parser.expect (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:4002:28)\n    at Parser.parseExprList (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:13900:14)\n    at Parser.parseArrayLike (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:13790:26)\n    at Parser.parseExprAtom (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12879:23)\n    at Parser.parseExprSubscripts (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12540:23)\n    at Parser.parseUpdate (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12519:21)\n    at Parser.parseMaybeUnary (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12490:23)\n    at Parser.parseMaybeUnaryOrPrivate (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12284:61)\n    at Parser.parseExprOps (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12291:23)\n    at Parser.parseMaybeConditional (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12261:23)\n    at Parser.parseMaybeAssign (/Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12214:21)\n    at /Users/ceyhunbahadircelik/Desktop/GitHub/Laravel-Sanctum-and-Vue-Authentication/node_modules/@babel/parser/lib/index.js:12172:39");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      secrets: [],
+      formData: {
+        email: '',
+        password: ''
+      }
+    };
+  },
+  methods: {
+    handleLogin: function handleLogin() {
+      var _this = this;
+
+      axios.get('/sanctum/csrf-cookie').then(function (response) {
+        axios.post('/login', _this.formData).then(function (response) {
+          _this.getSecrets();
+        });
+      });
+    },
+    getSecrets: function getSecrets() {
+      var _this2 = this;
+
+      axios.get('/api/secrets').then(function (response) {
+        console.log(response.data);
+        _this2.secrets = response.data;
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -5460,6 +5527,7 @@ try {
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+axios.defaults.withCredentials = true;
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -28131,56 +28199,114 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row mt-4" }, [
-      _c("div", { staticClass: "col-6 offset-3" }, [
-        _c(
-          "form",
-          {
-            attrs: { action: "#" },
-            on: {
-              submit: function ($event) {
-                $event.preventDefault()
-                return _vm.handleLogin.apply(null, arguments)
+    !_vm.secrets.length
+      ? _c("div", { staticClass: "row mt-4" }, [
+          _c("div", { staticClass: "col-6 offset-3" }, [
+            _c(
+              "form",
+              {
+                attrs: { action: "#" },
+                on: {
+                  submit: function ($event) {
+                    $event.preventDefault()
+                    return _vm.handleLogin.apply(null, arguments)
+                  },
+                },
               },
-            },
-          },
-          [
-            _c("h3", [_vm._v("Sing in for secrets")]),
-            _vm._v(" "),
-            _vm._m(0),
-            _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
-          ]
-        ),
-      ]),
-    ]),
+              [
+                _c("h3", [_vm._v("Sing in for secrets")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-row mb-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formData.email,
+                        expression: "formData.email",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "email",
+                      name: "email",
+                      placeholder: "Email Address",
+                    },
+                    domProps: { value: _vm.formData.email },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.formData, "email", $event.target.value)
+                      },
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-row mb-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formData.password,
+                        expression: "formData.password",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "password",
+                      name: "password",
+                      placeholder: "Password",
+                    },
+                    domProps: { value: _vm.formData.password },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.formData, "password", $event.target.value)
+                      },
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _vm._m(0),
+              ]
+            ),
+          ]),
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.secrets.length
+      ? _c("div", { staticClass: "row mt-4" }, [
+          _c(
+            "div",
+            { staticClass: "col-6 offset-3" },
+            [
+              _c("h3", [_vm._v("My Secrets")]),
+              _vm._v(" "),
+              _vm._l(_vm.secrets, function (secret, index) {
+                return _c("div", { key: index, staticClass: "secret" }, [
+                  _c("em", {
+                    domProps: { textContent: _vm._s(secret.created_at) },
+                  }),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("strong", {
+                    domProps: { textContent: _vm._s(secret.secret) },
+                  }),
+                ])
+              }),
+            ],
+            2
+          ),
+        ])
+      : _vm._e(),
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-row mb-2" }, [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "email", name: "email", placeholder: "Email Address" },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-row mb-2" }, [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "password", name: "password", placeholder: "Password" },
-      }),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
